@@ -1034,6 +1034,33 @@ header.header.a {
         font-weight: 700;
       }
     }
+
+    .modal-content {
+      display: none;
+      position: relative;
+      top: -30px;
+      width: 600px;
+      background: #fff;
+      z-index: -1;
+      padding: 35px 10px 25px 20px;
+      border-radius: 0px 0px 20px 20px;
+      border: 1px solid #25252557;
+      transition: 0.5s ease;
+      
+      p {
+        font-weight: 400;
+        color: #404040;
+        font-size: 15px;
+      }
+    }
+
+    .modal-content.active {
+      display: flex; 
+    }
+
+    .modal-content.ad {
+      display: flex; 
+    }
   }
 }
 
@@ -1257,6 +1284,8 @@ header.header.a {
 
 @media (max-width: 825px) {
   header.header {
+    padding: 30px 0px;
+
     .nav {
       display: none;
       position: absolute;
@@ -1800,6 +1829,10 @@ header.header.a {
       .box {
         width: 100%;
       }
+
+      .modal-content {
+        width: 95%;
+      }
     }
   }
 }
@@ -2050,9 +2083,9 @@ header.header.a {
 }
 
 /* CABEÇARIO, MODAL -> IDIOMA + SCRIPT */
+/* FOOTER, MODAL -> IDIOMA + SCRIPT */
 
 
 /* INICIO, DOWNLOAD & VER -> MODAL */
-/* PTOJETO, PARAGRAFO & IMAGE & -> MODAL */
-/* PERGUNTAS, MODAL */
-/* FOOTER, CONTENT & SCRIPT GMAIL, IDIOMA -> MODAL + SCRIPT */
+/* PROJETO, PARAGRAFO & IMAGE & -> MODAL */
+/* FOOTER, CONTENT */

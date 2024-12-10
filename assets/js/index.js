@@ -55,21 +55,34 @@ document.querySelectorAll(".touch").forEach((touch) => {
   });
 });
 
+// PERGUNTAS
+document.querySelectorAll('#box').forEach((box, index) => {
+  const modal = document.querySelectorAll('.modal-content')[index];
+  box.addEventListener('click', () => {
+    if (modal.style.display === 'flex') {
+      modal.style.display = 'none';
+    } else {
+      modal.style.display = 'flex'; 
+    }
+
+    modal.classList.toggle('active');
+  });
+});
+
+
 
 // FOOTER
-
 const form = document.querySelector('#form-contato');
 const inputEmail = form.querySelector('input[name="email"]');
 const botaoEnviar = form.querySelector('.touch');
 const mensagem = document.querySelector('#mensagem');
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault(); // Evita o envio padrão
+  e.preventDefault();
 
   // Alterações visuais
   botaoEnviar.textContent = 'Enviando...';
 
-  // Enviar via FormSubmit
   fetch(form.action, {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

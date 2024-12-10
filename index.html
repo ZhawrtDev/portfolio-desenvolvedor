@@ -372,31 +372,79 @@
           </p>
         </div>
 
-        <div class="boxs-content">
-          <div class="box e">
+        <div class="boxs-content a">
+          <div id="box" data-id="1" class="box e">
             <h1>Como você garante a qualidade do código?</h1>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
 
-          <div class="box">
+          <div class="modal-content">
+            <p>
+              Adoto práticas de código limpo, como nomes de variáveis claros e
+              funções pequenas e específicas. Utilizo ferramentas como ESLint
+              para manter padrões consistentes e sempre reviso o código antes de
+              um commit para identificar melhorias ou possíveis erros. Além
+              disso, dou prioridade a testes manuais e automatizados para
+              validar a funcionalidade antes de cada entrega.
+            </p>
+          </div>
+
+          <div id="box" data-id="2" class="box">
             <h1>Você tem experiência com APIs?</h1>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
 
-          <div class="box">
+          <div class="modal-content">
+            <p>
+              Sim, desenvolvi uma aplicação que consumia a API do YouTube para
+              buscar vídeos. Integrei endpoints de busca, autenticação OAuth e
+              salvei os dados relevantes no MongoDB, garantindo uma experiência
+              fluida para o usuário.
+            </p>
+          </div>
+
+          <div id="box" data-id="3" class="box">
             <h1>Como você lida com autenticação e segurança?</h1>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
 
-          <div class="box">
+          <div class="modal-content">
+            <p>
+              Em um projeto recente, implementei autenticação com JSON Web
+              Tokens (JWT), protegendo rotas sensíveis e armazenando tokens de
+              forma segura no AsyncStorage para aplicações móveis.
+            </p>
+          </div>
+
+          <div id="box" data-id="4" class="box">
             <h1>Você sabe trabalhar com controle de versão?</h1>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
 
-          <div class="box">
-            <h1>Você sabe trabalhar com controle de versão?</h1>
+          <div class="modal-content">
+            <p>
+              Sim, uso Github em todos os meus projetos. Em um sistema de
+              gerenciamento de tarefas, trabalhei com branches para desenvolver
+              novas funcionalidades sem interferir na versão principal, além de
+              realizar pull requests e code reviews para manter a qualidade do
+              código.
+            </p>
+          </div>
+
+          <div id="box" data-id="5" class="box">
+            <h1>Você já trabalhou com banco de dados?</h1>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
+        </div>
+
+        <div class="modal-content">
+          <p>
+            Tenho experiência com MongoDB para gerenciar dados não estruturados.
+            Prefiro essa abordagem para projetos que lidam com grandes volumes
+            de dados flexíveis, como sistemas de conteúdo e aplicativos móveis.
+            A estrutura baseada em documentos facilita o desenvolvimento ágil e
+            escalável.
+          </p>
         </div>
 
         <a href="#contato">
@@ -467,19 +515,29 @@
         <div class="box-contato">
           <h1>Digite seu Gmail</h1>
           <div class="row">
-            <form id="form-contato" action="https://formsubmit.co/moisesque82@gmail.com" method="POST">
-              <input type="email" name="email" placeholder="Digite seu Email" required />
+            <form
+              id="form-contato"
+              action="https://formsubmit.co/moisesque82@gmail.com"
+              method="POST"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="Digite seu Email"
+                required
+              />
               <button type="submit" class="touch">Enviar</button>
             </form>
           </div>
-          <p id="mensagem">Se tiver dúvidas ou sugestões, <span>Sinta-se à vontade</span></p>
+          <p id="mensagem">
+            Se tiver dúvidas ou sugestões, <span>Sinta-se à vontade</span>
+          </p>
         </div>
-        
       </div>
     </footer>
 
     <!-- MODAL -->
-     <!-- IDIOMA - CABEÇARIO -->
+    <!-- IDIOMA - CABEÇARIO -->
     <div class="idioma-modal">
       <div class="touch-idioma a">Português</div>
       <div class="touch-idioma">Inglês</div>
