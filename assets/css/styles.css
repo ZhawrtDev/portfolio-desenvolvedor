@@ -172,6 +172,11 @@ header.header {
       color: #404040;
       font-size: 30px;
     }
+
+    i {
+      color: #404040;
+      font-size: 25px;
+    }
   }
 }
 
@@ -208,6 +213,9 @@ header.header.a {
         border: 1px solid #101010;
 
         ion-icon {
+          color: #101010;
+        }
+        i {
           color: #101010;
         }
       }
@@ -1192,6 +1200,52 @@ header.header.a {
   }
 }
 
+/* MODAL */
+/* MODAL - CABEÇARIO */
+.idioma-modal {
+  position: fixed;
+  top: 100px;
+  left: 84%;
+  transform: translate(-50%);
+  width: 200px;
+  height: auto;
+  padding: 10px 0px;
+  background: #101010;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  z-index: 99;
+  border-radius: 20px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+
+  .touch-idioma {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: #404040;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .touch-idioma:hover {
+    color: #fff;
+  }
+
+  .touch-idioma.a {
+    color: #fff;
+  }
+}
+
+.idioma-modal.active {
+  display: flex;
+}
+
 /* RESPONSIVO */
 
 /* CABEÇARIO */
@@ -1995,4 +2049,10 @@ header.header.a {
   }
 }
 
-/* ARRUMAR O CONTEUDO && MODAL && FUNÇÃO */
+/* CABEÇARIO, MODAL -> IDIOMA + SCRIPT */
+
+
+/* INICIO, DOWNLOAD & VER -> MODAL */
+/* PTOJETO, PARAGRAFO & IMAGE & -> MODAL */
+/* PERGUNTAS, MODAL */
+/* FOOTER, CONTENT & SCRIPT GMAIL, IDIOMA -> MODAL + SCRIPT */

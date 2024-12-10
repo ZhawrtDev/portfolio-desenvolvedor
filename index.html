@@ -56,18 +56,27 @@
             <ion-icon name="logo-instagram"></ion-icon>
           </div>
         </a>
-        <a target="_blank" href="https://www.linkedin.com/in/zhwart/" class="outher-box b">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/zhwart/"
+          class="outher-box b"
+        >
           <div class="box-nav">
             <ion-icon name="logo-linkedin"></ion-icon>
           </div>
         </a>
-        <a target="_blank" href="https://github.com/ZhawrtDev" class="outher-box b">
+        <a
+          target="_blank"
+          href="https://github.com/ZhawrtDev"
+          class="outher-box b"
+        >
           <div class="box-nav">
             <ion-icon name="logo-github"></ion-icon>
           </div>
         </a>
-        <a class="outher-box a">
-          <div class="box-nav"><i class="fa-solid fa-globe"></i>
+        <a id="idioma" class="outher-box a">
+          <div class="box-nav">
+            <i class="fa-solid fa-globe"></i>
           </div>
         </a>
       </div>
@@ -401,7 +410,7 @@
       <div class="main-first">
         <h1 class="logo">ZHWART</h1>
 
-        <div class="touch">
+        <div id="idioma" class="touch">
           <i class="fa-solid fa-globe"></i>
           <h1>Portugues</h1>
           <i class="fa-solid fa-chevron-down"></i>
@@ -456,19 +465,45 @@
         </div>
 
         <div class="box-contato">
-          <h1>Digite seu gmail</h1>
+          <h1>Digite seu Gmail</h1>
           <div class="row">
-            <input type="email" name="" placeholder="Digite seu Email" />
-            <button class="touch">Enviar</button>
+            <form id="form-contato" action="https://formsubmit.co/moisesque82@gmail.com" method="POST">
+              <input type="email" name="email" placeholder="Digite seu Email" required />
+              <button type="submit" class="touch">Enviar</button>
+            </form>
           </div>
-          <p>Se tiver dúvidas ou sugestões, <span>Sinta-se à vontade</span></p>
+          <p id="mensagem">Se tiver dúvidas ou sugestões, <span>Sinta-se à vontade</span></p>
         </div>
+        
       </div>
     </footer>
 
+    <!-- MODAL -->
+     <!-- IDIOMA - CABEÇARIO -->
+    <div class="idioma-modal">
+      <div class="touch-idioma a">Português</div>
+      <div class="touch-idioma">Inglês</div>
+      <div class="touch-idioma">Espanhol</div>
+      <div class="touch-idioma">Francês</div>
+      <div class="touch-idioma">Alemão</div>
+      <div class="touch-idioma">Italiano</div>
+      <div class="touch-idioma">Japonês</div>
+      <div class="touch-idioma">Chinês</div>
+      <div class="touch-idioma">Coreano</div>
+      <div class="touch-idioma">Russo</div>
+      <div class="touch-idioma">Árabe</div>
+      <div class="touch-idioma">Hindi</div>
+    </div>
+
     <!-- SCIRPT -->
     <script src="assets/js/index.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
