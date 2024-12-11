@@ -90,6 +90,9 @@ header.header {
     li a {
       color: #404040;
       font-weight: 400;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      height: 30px;
     }
 
     li span {
@@ -564,7 +567,7 @@ header.header.a {
       font-size: 11px;
       font-weight: 400;
       margin: 21px 0px;
-      color: #404040;
+      color: #494949;
       max-width: 550px;
     }
   }
@@ -609,7 +612,7 @@ header.header.a {
         font-size: 11px;
         font-weight: 400;
         margin: 21px 0px;
-        color: #404040;
+        color: #494949;
         max-width: 450px;
       }
     }
@@ -654,7 +657,7 @@ header.header.a {
       font-size: 11px;
       font-weight: 400;
       margin: 21px 0px;
-      color: #404040;
+      color: #494949;
       max-width: 595px;
     }
 
@@ -832,18 +835,20 @@ header.header.a {
 
     .box-projeto {
       position: relative;
-      width: 450px;
+      width: 350px;
       height: 450px;
-      border-radius: 25px;
-      background: #e6e8f1;
+      border-radius: 10px;
+      background: #101010;
       cursor: pointer;
       overflow: hidden;
       margin: 0px 5px;
 
       img.projeto {
         position: relative;
-        top: 15px;
-        width: 100%;
+        top: -15px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 375px;
       }
 
       .inform {
@@ -906,7 +911,7 @@ header.header.a {
             background: #222222;
             margin-bottom: 10px;
             margin-right: -5px;
-            border: 1px solid #e6e8f1;
+            border: 1px solid #101010;
 
             i {
               font-size: 15px;
@@ -922,7 +927,7 @@ header.header.a {
           margin: 0px 0px 15px 5px;
           font-size: 9px;
           font-weight: 500;
-          color: #222222;
+          color: #838383;
         }
 
         .main-box {
@@ -930,8 +935,8 @@ header.header.a {
           flex-direction: row;
 
           .box-cat {
-            background: #fff;
-            color: #101010;
+            background: #25252557;
+            color: #838383;
             padding: 0px 15px;
             height: 30px;
             font-weight: 600;
@@ -1046,7 +1051,7 @@ header.header.a {
       border-radius: 0px 0px 20px 20px;
       border: 1px solid #25252557;
       transition: 0.5s ease;
-      
+
       p {
         font-weight: 400;
         color: #404040;
@@ -1055,11 +1060,11 @@ header.header.a {
     }
 
     .modal-content.active {
-      display: flex; 
+      display: flex;
     }
 
     .modal-content.ad {
-      display: flex; 
+      display: flex;
     }
   }
 }
@@ -1273,6 +1278,275 @@ header.header.a {
   display: flex;
 }
 
+/* APLICATIVO - MODAL */
+.modal-projeto-bk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(20px);
+  z-index: 99;
+  background: #1010105e;
+
+  .close {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -5px;
+    right: 180px;
+    border-radius: 100px;
+    background: #101010;
+    border: 1px solid #404040;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    i {
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+
+  .box-modal {
+    width: 400px;
+    height: 520px;
+    padding-top: 40px;
+    background: #101010;
+    border-radius: 20px;
+    border: 1px solid #404040;
+
+    .text-titulo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      p {
+        text-align: center;
+        font-weight: 500;
+        font-size: 9px;
+        max-width: 290px;
+        color: #696969;
+        margin-top: 7px;
+      }
+
+      .text {
+        span {
+          font-size: 20px;
+          color: #3d3d3d;
+          font-weight: 750;
+        }
+
+        h1 {
+          color: #fff;
+          font-size: 30px;
+          font-weight: 750;
+        }
+      }
+    }
+
+    .img {
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      width: 300px;
+      margin-top: 0px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .touchs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 15px;
+        width: 150px;
+        height: 50px;
+        border: 1px solid #404040;
+        border-radius: 100px;
+        cursor: pointer;
+
+        h1 {
+          font-size: 13px;
+          margin: 0px 0px 0px 10px;
+          color: #fff;
+        }
+
+        i.fa-solid {
+          font-size: 14px;
+          color: #fff;
+        }
+
+        i.fa-solid.fa-chevron-down {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+.modal-projeto-bk.active {
+  display: flex;
+}
+
+/* SITE - MODAL */
+.modal-projeto-b {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(20px);
+  z-index: 99;
+  background: #1010105e;
+
+  .close {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -5px;
+    right: 180px;
+    border-radius: 100px;
+    background: #101010;
+    border: 1px solid #404040;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    i {
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+
+  .box-modal {
+    width: 400px;
+    height: 500px;
+    padding-top: 40px;
+    background: #101010;
+    border-radius: 20px;
+    border: 1px solid #404040;
+
+    .text-titulo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      p {
+        text-align: center;
+        font-weight: 500;
+        font-size: 9px;
+        max-width: 290px;
+        color: #696969;
+        margin-top: 7px;
+      }
+
+      .text {
+        span {
+          font-size: 20px;
+          color: #3d3d3d;
+          font-weight: 750;
+        }
+
+        h1 {
+          color: #fff;
+          font-size: 30px;
+          font-weight: 750;
+        }
+      }
+    }
+
+    .img {
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      width: 300px;
+      margin-top: 0px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .touchs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0px;
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 15px;
+        width: 150px;
+        height: 50px;
+        border: 1px solid #404040;
+        border-radius: 100px;
+        cursor: pointer;
+        margin-right: 10px;
+
+        h1 {
+          font-size: 13px;
+          margin: 0px 0px 0px 10px;
+          color: #fff;
+        }
+
+        i.fa-solid {
+          font-size: 14px;
+          color: #fff;
+        }
+
+        i.fa-solid.fa-chevron-down {
+          font-size: 10px;
+        }
+      }
+
+      .btn.a {
+        background: #404040;
+
+        h1 {
+          font-size: 13px;
+          margin: 0px 0px 0px 10px;
+          color: #fff;
+        }
+
+        i.fa-solid {
+          font-size: 14px;
+          color: #fff;
+        }
+
+        i.fa-solid.fa-chevron-down {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+.modal-projeto-b.active {
+  display: flex;
+}
+
 /* RESPONSIVO */
 
 /* CABEÇARIO */
@@ -1300,7 +1574,7 @@ header.header.a {
       align-items: normal;
       text-align: left;
       flex-direction: column;
-      z-index: 99;
+      z-index: 90;
 
       li {
         span {
@@ -1320,6 +1594,18 @@ header.header.a {
 
     .nav.active {
       display: flex;
+      width: 150px;
+      height: 180px;
+      border-radius: 20px;
+
+      li {
+        a {
+          display: flex;
+          margin-top: 5px;
+          margin-bottom: 10px;
+          height: 20px;
+        }
+      }
     }
 
     .outher {
@@ -1634,7 +1920,7 @@ header.header.a {
           font-size: 11px;
           font-weight: 400;
           margin: 21px 0px;
-          color: #404040;
+          color: #838383;
           max-width: 400px;
         }
       }
@@ -1795,7 +2081,7 @@ header.header.a {
         font-size: 11px;
         font-weight: 400;
         margin: 21px 0px;
-        color: #404040;
+        color: #838383;
         max-width: 90%;
       }
     }
@@ -2082,10 +2368,52 @@ header.header.a {
   }
 }
 
-/* CABEÇARIO, MODAL -> IDIOMA + SCRIPT */
-/* FOOTER, MODAL -> IDIOMA + SCRIPT */
+@media (max-width: 310px) {
+  #footer {
+    .main-penultimate {
+      .text-content {
+        h1 {
+          font-size: 25px;
+        }
+        p {
+          max-width: 250px;
+          font-size: 9px;
+        }
+      }
+    }
+    .main-first {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      width: 90%;
+      margin-bottom: 35px;
+      margin-top: 20px;
+    }
+    h1.logo {
+      font-size: 30px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #101010, #3d3d3d, #101010);
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+  }
+}
 
+/* MODAL */
+@media (max-width: 430px) {
+  .modal-projeto-bk {
+    .box-modal {
+      width: 95%;
+    }
 
-/* INICIO, DOWNLOAD & VER -> MODAL */
-/* PROJETO, PARAGRAFO & IMAGE & -> MODAL */
-/* FOOTER, CONTENT */
+    .close {
+      right: 0px;
+    }
+  }
+}
+
+/* CABEÇARIO, IDIOMA SCRIPT */
+/* INICIO, DOWNLOAD & VER */
+/* PROJETO, ARRUMAR */
