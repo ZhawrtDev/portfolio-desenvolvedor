@@ -34,18 +34,18 @@ window.addEventListener("scroll", () => {
 });
 
 // PROJETOS
-document.querySelectorAll(".touch").forEach((touch) => {
+document.querySelectorAll(".touch-tch").forEach((touch) => {
   touch.addEventListener("click", () => {
-    document.querySelectorAll(".touch").forEach((t) => t.classList.remove("a"));
+    document.querySelectorAll(".touch-tch").forEach((t) => t.classList.remove("a"));
     touch.classList.add("a");
   });
 });
 
-document.querySelectorAll(".touch").forEach((touch) => {
+document.querySelectorAll(".touch-tch").forEach((touch) => {
   touch.addEventListener("click", () => {
     const categoria = touch.textContent.toLowerCase();
 
-    document.querySelectorAll(".box-projeto").forEach((projeto) => {
+    document.querySelectorAll(".box-projeto-tch").forEach((projeto) => {
       if (categoria === "todos" || projeto.id === categoria) {
         projeto.style.display = "block";
       } else {
@@ -80,7 +80,6 @@ const mensagem = document.querySelector('#mensagem');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  // Alterações visuais
   botaoEnviar.textContent = 'Enviando...';
 
   fetch(form.action, {
@@ -92,7 +91,7 @@ form.addEventListener('submit', (e) => {
       if (response.ok) {
         mensagem.innerHTML = '<span style="color:green;">Enviado com sucesso!</span>';
         botaoEnviar.textContent = 'Enviar';
-        inputEmail.value = ''; // Limpa o campo
+        inputEmail.value = '';
       } else {
         mensagem.innerHTML = '<span style="color:red;">Erro ao enviar, tente novamente.</span>';
         botaoEnviar.textContent = 'Enviar';
@@ -102,4 +101,35 @@ form.addEventListener('submit', (e) => {
       mensagem.innerHTML = '<span style="color:red;">Erro ao enviar, tente novamente.</span>';
       botaoEnviar.textContent = 'Enviar';
     });
+});
+
+
+
+async function traduzirTexto(texto, lang) {
+  const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${lang}&dt=t&q=${encodeURIComponent(texto)}`;
+  try {
+      const res = await fetch(url);
+      const data = await res.json();
+      return data[0][0][0];
+  } catch (err) {
+      console.error("Erro ao traduzir:", err);
+      return texto;
+  }
+}
+
+async function traduzirPagina(lang) {
+  const elementos = document.querySelectorAll("h1, h2, h3, h4, h5, span, p");
+  
+  for (let el of elementos) {
+      const textoOriginal = el.textContent.trim();
+      const textoTraduzido = await traduzirTexto(textoOriginal, lang);
+      el.textContent = textoTraduzido;
+  }
+}
+
+document.querySelectorAll(".touch-idioma").forEach(btn => {
+  btn.addEventListener("click", () => {
+      const lang = btn.getAttribute("data-lang");
+      traduzirPagina(lang);
+  });
 });
